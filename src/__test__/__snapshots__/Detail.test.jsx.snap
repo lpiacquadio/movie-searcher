@@ -1,0 +1,7 @@
+// Vitest Snapshot v1
+
+exports[`Detail > Detail component renders correctly 1`] = `
+<div>
+  Detail Page
+</div>
+`;

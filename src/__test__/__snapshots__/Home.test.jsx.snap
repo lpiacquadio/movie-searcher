@@ -1,0 +1,7 @@
+// Vitest Snapshot v1
+
+exports[`Home > Home component renders correctly 1`] = `
+<div>
+  Home Page
+</div>
+`;
