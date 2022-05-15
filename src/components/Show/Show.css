@@ -1,6 +1,7 @@
 .Show {
     margin-bottom: 0.5em;
     height: 500px;
+    width: 210px;
     overflow: hidden;
 }
 
@@ -28,7 +29,6 @@
 }
 
 .Show img {
-    width: 100%;
     object-fit: contain;
     vertical-align: top;
 }

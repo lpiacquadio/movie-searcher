@@ -1,8 +1,15 @@
+.Home {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0px 20px;
+}
+
 .Searcher {
     background: antiquewhite;
     padding: 30px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
 }
@@ -14,18 +21,13 @@
     cursor: default;
 }
 
-.Content {
-    padding-top: 20px;
-    min-height: calc(100vh - 110px);
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 @media screen and (min-width: 37.5rem) {
     .Title {
         font-size: 1.75rem;
+    }
+
+    .Searcher {
+        flex-direction: row;
     }
 }
 

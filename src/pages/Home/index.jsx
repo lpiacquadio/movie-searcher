@@ -10,7 +10,7 @@ import './Home.css'
 export function Home() {
     const { loading, shows, search, onSearch } = useShows('')
     return (
-        <div>
+        <div className="Home">
             <header className="Searcher">
                 <div className="Title">{DEFAULT_TEXTS.TITLE}</div>
                 <Search
@@ -19,7 +19,7 @@ export function Home() {
                     value={search}
                 />
             </header>
-            <main className="Content">
+            <main>
                 {loading ? (
                     <Spinner />
                 ) : (

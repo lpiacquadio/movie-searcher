@@ -1,0 +1,65 @@
+.ShowDetail {
+    display: grid;
+    grid-template-columns: auto;
+    gap: 6px;
+}
+
+.ShowDetail h4 {
+    margin: 0;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.ShowDetail-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+}
+
+.ShowDetail-dates {
+    font-style: italic;
+    font-size: 0.8rem;
+    font-weight: normal;
+}
+
+.ShowDetail-info {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+}
+
+.ShowDetail img {
+    object-fit: contain;
+    vertical-align: top;
+}
+
+.ShowDetail-description p {
+    margin: 0;
+}
+
+@media screen and (min-width: 37.5rem) {
+    .ShowDetail {
+        grid-template-columns: 210px auto;
+    }
+
+    .ShowDetail img {
+        margin: 0;
+    }
+
+    .ShowDetail-container {
+        text-align: left;
+    }
+
+    .ShowDetail-info {
+        justify-content: flex-start;
+    }
+}
+
+@media screen and (min-width: 60rem) {
+    .ShowDetail h4 {
+        display: inline-block;
+    }
+}

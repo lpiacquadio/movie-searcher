@@ -1,5 +1,38 @@
 import React from 'react'
+import { useParams } from 'react-router-dom'
+import { useShow } from '../../hooks/useShow'
+import { Spinner } from '../../components/Spinner'
+import { ShowDetail } from '../../components/ShowDetail'
+import { ListOfImages } from '../../components/ListOfImages'
+import './Detail.css'
 
 export function Detail() {
-    return <div>Detail Page</div>
+    const { id } = useParams()
+    const { loading, show } = useShow(id)
+    return (
+        <div className="Detail">
+            <main>
+                {loading ? (
+                    <Spinner />
+                ) : !show ? (
+                    <div>404</div>
+                ) : (
+                    <div className="Detail-Content">
+                        <ShowDetail
+                            id={show.id}
+                            thumbnail={show.thumbnail}
+                            title={show.title}
+                            description={show.description}
+                            dates={`(${show.premiered}${
+                                show.ended ? ' - ' + show.ended : ''
+                            })`}
+                            genres={show.genres}
+                            rating={show.rating}
+                        />
+                        <ListOfImages images={show.images} />
+                    </div>
+                )}
+            </main>
+        </div>
+    )
 }
