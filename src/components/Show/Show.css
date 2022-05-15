@@ -1,0 +1,38 @@
+.Show {
+    margin-bottom: 0.5em;
+    height: 500px;
+    overflow: hidden;
+}
+
+.Show-link {
+    color: #000;
+    display: block;
+    text-decoration: none;
+    width: 100%;
+}
+
+.Show-description {
+    max-height: 180px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 8;
+    -webkit-box-orient: vertical;
+}
+
+.Show h4 {
+    margin: 10px 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.Show img {
+    width: 100%;
+    object-fit: contain;
+    vertical-align: top;
+}
+
+.Show-description p {
+    margin: 0;
+}

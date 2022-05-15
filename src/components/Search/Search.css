@@ -1,0 +1,31 @@
+.Search {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    font-size: 1rem;
+    width: fit-content;
+    height: 50px;
+    border-bottom: 2px solid gray;
+    cursor: text;
+}
+
+.Search input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    width: 150px;
+    margin-left: 10px;
+    font-size: 1rem;
+}
+
+@media screen and (min-width: 37.5rem) {
+    .Search input {
+        width: 250px;
+    }
+}
+
+@media screen and (min-width: 60rem) {
+    .Search input {
+        width: 300px;
+    }
+}
