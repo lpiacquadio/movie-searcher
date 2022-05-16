@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { useParams } from 'react-router-dom'
 import { useShow } from '../../hooks/useShow'
 import { Spinner } from '../../components/Spinner'
@@ -6,9 +7,9 @@ import { ShowDetail } from '../../components/ShowDetail'
 import { ListOfImages } from '../../components/ListOfImages'
 import './Detail.css'
 
-export function Detail() {
+export function Detail({ defaultId }) {
     const { id } = useParams()
-    const { loading, show } = useShow(id)
+    const { loading, show } = useShow(id || defaultId)
     return (
         <div className="Detail">
             <main>
@@ -35,4 +36,8 @@ export function Detail() {
             </main>
         </div>
     )
+}
+
+Detail.propTypes = {
+    id: PropTypes.number
 }

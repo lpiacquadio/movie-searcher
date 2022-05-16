@@ -21,7 +21,7 @@ export function Rating({ value = 0 }) {
             style={{ color, backgroundColor }}
             aria-label="Rating"
         >
-            {value ?? '?'}
+            {value > 0 ? value : '?'}
         </span>
     )
 }

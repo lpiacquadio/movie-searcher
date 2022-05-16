@@ -8,7 +8,7 @@ import './ShowDetail.css'
 export function ShowDetail({ thumbnail, title, description, dates, genres, rating }) {
     return (
         <div className="ShowDetail">
-            <Image src={thumbnail} alt={title} />
+            <Image src={thumbnail} alt={title} ariaLabel="Show's portrait" />
             <div className="ShowDetail-container">
                 <h4>{title} <span className="ShowDetail-dates">{dates}</span></h4>
                 <div className="ShowDetail-info">

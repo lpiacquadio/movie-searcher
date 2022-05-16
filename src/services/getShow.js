@@ -11,19 +11,32 @@ const successResponse = (apiResponse) => {
             description: apiResponse.summary,
             genres: apiResponse.genres,
             rating: apiResponse.rating.average,
-            images: apiResponse._embedded.images.filter(image => image?.resolutions?.medium?.url).map(image => image.resolutions.medium.url)
+            images: apiResponse._embedded.images
+                .filter(
+                    (image) =>
+                        image?.resolutions?.medium?.url &&
+                        image?.resolutions?.medium?.height === 295 &&
+                        image?.resolutions?.medium?.width === 210
+                )
+                .map((image) => image.resolutions.medium.url)
         }
 
         if (apiResponse.premiered) {
             const premiered = apiResponse.premiered.split('-')
-            show.premiered = format(new Date(premiered[0], premiered[1], premiered[2]), 'MM/dd/yyyy')
+            show.premiered = format(
+                new Date(premiered[0], premiered[1], premiered[2]),
+                'MM/dd/yyyy'
+            )
         } else {
             show.premiered = '?'
         }
 
         if (apiResponse.ended) {
             const ended = apiResponse.ended.split('-')
-            show.ended = format(new Date(ended[0], ended[1], ended[2]), 'MM/dd/yyyy')
+            show.ended = format(
+                new Date(ended[0], ended[1], ended[2]),
+                'MM/dd/yyyy'
+            )
         }
 
         return show

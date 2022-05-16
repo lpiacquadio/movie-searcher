@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { IMAGE_SIZE, IMAGE_PLACEHOLDER } from '../../services/settings'
 import './Image.css'
 
-export function Image({ src, alt }) {
+export function Image({ src, alt, ariaLabel }) {
     const width = IMAGE_SIZE.width
     const height = IMAGE_SIZE.height
     const fallbackUrl = `${IMAGE_PLACEHOLDER}/${width}x${height}`
@@ -27,12 +27,13 @@ export function Image({ src, alt }) {
             height={height}
             onError={handleError}
             loading="lazy"
-            aria-label="Show's portrait"
+            aria-label={ariaLabel}
         />
     )
 }
 
 Image.propTypes = {
     src: PropTypes.string,
-    alt: PropTypes.string
+    alt: PropTypes.string,
+    ariaLabel: PropTypes.string.isRequired
 }

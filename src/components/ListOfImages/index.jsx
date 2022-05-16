@@ -11,6 +11,7 @@ export function ListOfImages({ images }) {
                 <Image
                     key={`image_${index}`}
                     src={src}
+                    ariaLabel={`Show's image #${index}`}
                 />
             ))}
         </div>

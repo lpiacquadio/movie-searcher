@@ -3,6 +3,7 @@
     height: 500px;
     width: 210px;
     overflow: hidden;
+    margin: auto;
 }
 
 .Show-link {

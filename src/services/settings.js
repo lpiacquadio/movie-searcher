@@ -1,3 +1,4 @@
+export const QUERY_PARAMETER = 'search'
 export const API_URL = 'https://api.tvmaze.com'
 export const IMAGE_SIZE = {
     width: 210,
