@@ -6,8 +6,9 @@ export const IMAGE_SIZE = {
 }
 export const IMAGE_PLACEHOLDER = 'https://via.placeholder.com'
 export const DEFAULT_TEXTS = {
-    TITLE: 'Show\'s searcher',
+    TITLE: "Show's searcher",
     SEARCH_PLACEHOLDER: 'Search any show...',
-    NOT_STARTED: "You haven't searched for anything yet, try searching for your favorite show!",
-    NOT_FOUND: "😢 I didn't find the show you are looking for",
+    NOT_STARTED:
+        "You haven't searched for anything yet, try searching for your favorite show!",
+    NOT_FOUND: "😢 I didn't find the show you are looking for"
 }

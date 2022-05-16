@@ -6,10 +6,8 @@ export function useShow(id) {
     const [loading, setLoading] = useState(false)
 
     useEffect(() => {
-        if (!show) {
-            setLoading(true)
-            getShow(id).then((newShow) => onSave(newShow))
-        }
+        setLoading(true)
+        getShow(id).then((newShow) => onSave(newShow))
     }, [])
 
     const onSave = (newShow) => {

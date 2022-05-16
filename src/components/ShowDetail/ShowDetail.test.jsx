@@ -15,14 +15,12 @@ describe('ShowDetail', () => {
             genres: ['Random'],
             rating: 10
         }
-        const component = render(
-            <ShowDetail {...props} />
-        )
+        const component = render(<ShowDetail {...props} />)
         component.getByLabelText("Show's portrait")
         component.getByText(props.title)
         component.getByText(props.description)
         component.getByText(props.dates)
-        props.genres.forEach(genre => {
+        props.genres.forEach((genre) => {
             component.getByText(genre)
         })
         component.getByText(10)

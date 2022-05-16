@@ -1,12 +1,12 @@
 import React from 'react'
-import { render, cleanup, fireEvent, prettyDOM } from '@testing-library/react'
+import { render, cleanup, fireEvent } from '@testing-library/react'
 import { describe, expect, test, afterEach } from 'vitest'
 import { Search } from './index'
 
 describe('Search', () => {
     afterEach(cleanup)
 
-    test('Call onSearch when input changes', async () => {
+    test('Call onSearch when input changes', () => {
         let called = false
         const props = {
             onSearch: () => {
@@ -19,7 +19,7 @@ describe('Search', () => {
         expect(called).toBe(true)
     })
 
-    test('Focus on the input when the component has been clicked', async () => {
+    test('Focus on the input when the component has been clicked', () => {
         let focused = false
         const props = {
             onSearch: () => {}

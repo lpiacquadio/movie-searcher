@@ -8,7 +8,7 @@ import { Show } from './index'
 describe('Show', () => {
     afterEach(cleanup)
 
-    test('Display the thumbnail, title and description', async () => {
+    test('Display the thumbnail, title and description', () => {
         const props = {
             id: 404,
             thumbnail: null,
@@ -22,7 +22,7 @@ describe('Show', () => {
         )
         component.getByText(props.title)
         component.getByText(props.description)
-        const a = component.getByLabelText("Show")
+        const a = component.getByLabelText('Show')
         expect(a).toHaveProperty(
             'href',
             `${window.location.origin}/${props.id}`

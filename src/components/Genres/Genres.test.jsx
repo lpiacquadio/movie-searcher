@@ -8,10 +8,8 @@ describe('Genres', () => {
 
     test('Display the genres', () => {
         const values = ['Other', 'Random', 'Thing']
-        const component = render(
-            <Genres values={values} />
-        )
-        values.forEach(value => {
+        const component = render(<Genres values={values} />)
+        values.forEach((value) => {
             component.getByText(value)
         })
     })
