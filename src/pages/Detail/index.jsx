@@ -1,11 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { useParams } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 import { useShow } from '../../hooks/useShow'
 import { Spinner } from '../../components/Spinner'
+import { NotFound } from '../../components/NotFound'
 import { ShowDetail } from '../../components/ShowDetail'
 import { ListOfImages } from '../../components/ListOfImages'
 import styles from './Detail.module.css'
+import { DEFAULT_TEXTS } from '../../services/settings'
 
 export function Detail({ defaultId }) {
     const { id } = useParams()
@@ -16,7 +18,10 @@ export function Detail({ defaultId }) {
                 {loading ? (
                     <Spinner />
                 ) : !show ? (
-                    <div>404</div>
+                    <>
+                        <NotFound />
+                        <Link to="/" aria-label="Show">{DEFAULT_TEXTS.GO_BACK}</Link>
+                    </>
                 ) : (
                     <div className={styles['Detail-Content']}>
                         <ShowDetail

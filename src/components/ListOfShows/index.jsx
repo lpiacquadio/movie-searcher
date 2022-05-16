@@ -1,13 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { NotStarted } from '../NotStarted'
+import { NotFound } from '../NotFound'
 import { Show } from '../Show'
 import styles from './ListOfShows.module.css'
 
-export function ListOfShows({ onNotStarted, onNotFound, search, shows }) {
+export function ListOfShows({ search, shows }) {
     if (!search) {
-        return onNotStarted
+        return <NotStarted />
     } else if (!shows.length) {
-        return onNotFound
+        return <NotFound />
     }
     return (
         <div className={styles.ListOfShows}>
@@ -25,10 +27,6 @@ export function ListOfShows({ onNotStarted, onNotFound, search, shows }) {
 }
 
 ListOfShows.propTypes = {
-    onNotStarted: PropTypes.oneOfType([PropTypes.element, PropTypes.string])
-        .isRequired,
-    onNotFound: PropTypes.oneOfType([PropTypes.element, PropTypes.string])
-        .isRequired,
     search: PropTypes.string,
     shows: PropTypes.arrayOf(
         PropTypes.shape({

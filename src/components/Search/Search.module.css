@@ -5,7 +5,7 @@
     font-size: 1rem;
     width: fit-content;
     height: 50px;
-    border-bottom: 2px solid gray;
+    border-bottom: 2px solid #FFF;
     cursor: text;
 }
 
@@ -16,6 +16,10 @@
     width: 150px;
     margin-left: 10px;
     font-size: 1rem;
+    color: inherit;
+}
+
+.Search input::placeholder {
     color: inherit;
 }
 

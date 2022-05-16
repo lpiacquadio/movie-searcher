@@ -8,6 +8,7 @@ import {
 import { describe, test, afterEach } from 'vitest'
 import { BrowserRouter } from 'react-router-dom'
 import { Detail } from './index'
+import { DEFAULT_TEXTS } from '../../services/settings'
 
 describe('Detail', () => {
     afterEach(cleanup)
@@ -24,7 +25,7 @@ describe('Detail', () => {
         await waitForElementToBeRemoved(() =>
             component.getByLabelText('Loading')
         )
-        component.getByText('404')
+        component.getByText(DEFAULT_TEXTS.NOT_FOUND)
     })
 
     test('Find nothing and then find something', async () => {

@@ -10,8 +10,6 @@ describe('ListOfShows', () => {
 
     test('Search not started', () => {
         const props = {
-            onNotStarted: DEFAULT_TEXTS.NOT_STARTED,
-            onNotFound: DEFAULT_TEXTS.NOT_FOUND,
             search: '',
             shows: []
         }
@@ -25,8 +23,6 @@ describe('ListOfShows', () => {
 
     test('Show not found', () => {
         const props = {
-            onNotStarted: DEFAULT_TEXTS.NOT_STARTED,
-            onNotFound: DEFAULT_TEXTS.NOT_FOUND,
             search: 'Something',
             shows: []
         }
@@ -40,8 +36,6 @@ describe('ListOfShows', () => {
 
     test('Shows found', () => {
         const props = {
-            onNotStarted: DEFAULT_TEXTS.NOT_STARTED,
-            onNotFound: DEFAULT_TEXTS.NOT_FOUND,
             search: 'Something',
             shows: [
                 {

@@ -9,6 +9,7 @@ export const DEFAULT_TEXTS = {
     TITLE: "Show's searcher",
     SEARCH_PLACEHOLDER: 'Search any show...',
     NOT_STARTED:
-        "You haven't searched for anything yet, try searching for your favorite show!",
-    NOT_FOUND: "😢 I didn't find the show you are looking for"
+        "If you haven't searched for anything yet, try searching for your favorite show!",
+    NOT_FOUND: "😢 I didn't find the show you are looking for",
+    GO_BACK: 'Go back'
 }
