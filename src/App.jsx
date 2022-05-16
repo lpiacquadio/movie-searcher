@@ -7,8 +7,8 @@ export function App() {
     return (
         <BrowserRouter>
             <Routes>
-                <Route index path="/" element={<Home />} />
-                <Route index path="/:id" element={<Detail />} />
+                <Route path="/" element={<Home />} />
+                <Route path="/:id" element={<Detail />} />
             </Routes>
         </BrowserRouter>
     )
