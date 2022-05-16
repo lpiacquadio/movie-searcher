@@ -1,7 +1,7 @@
 {
-    "redirects": [
+    "rewrites": [
       { "source": "/", "destination": "/" },
       { "source": "/:id", "destination": "/:id" },
-      { "source": "/[^.]+", "destination": "/" }
+      { "source": "/(.*)", "destination": "/" }
     ]
   }
