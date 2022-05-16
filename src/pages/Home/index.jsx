@@ -5,14 +5,14 @@ import { Spinner } from '../../components/Spinner'
 import { Info } from '../../components/Info'
 import { ListOfShows } from '../../components/ListOfShows'
 import { DEFAULT_TEXTS } from '../../services/settings'
-import './Home.css'
+import styles from './Home.module.css'
 
 export function Home() {
     const { loading, shows, search, onSearch } = useShows('')
     return (
-        <div className="Home">
-            <header className="Searcher">
-                <div className="Title">{DEFAULT_TEXTS.TITLE}</div>
+        <div className={styles.Home}>
+            <header className={styles.Searcher}>
+                <div className={styles.Title}>{DEFAULT_TEXTS.TITLE}</div>
                 <Search
                     onSearch={onSearch}
                     placeholder={DEFAULT_TEXTS.SEARCH_PLACEHOLDER}

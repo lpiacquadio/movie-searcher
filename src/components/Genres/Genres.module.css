@@ -9,7 +9,8 @@
 }
 
 .Genres li {
-    background: antiquewhite;
+    background: #22577a;
+    color: #FFF;
     padding: 5px 10px;
     border-radius: 4px;
     display: flex;

@@ -5,20 +5,20 @@ import { useShow } from '../../hooks/useShow'
 import { Spinner } from '../../components/Spinner'
 import { ShowDetail } from '../../components/ShowDetail'
 import { ListOfImages } from '../../components/ListOfImages'
-import './Detail.css'
+import styles from './Detail.module.css'
 
 export function Detail({ defaultId }) {
     const { id } = useParams()
     const { loading, show } = useShow(id || defaultId)
     return (
-        <div className="Detail">
+        <div className={styles.Detail}>
             <main>
                 {loading ? (
                     <Spinner />
                 ) : !show ? (
                     <div>404</div>
                 ) : (
-                    <div className="Detail-Content">
+                    <div className={styles['Detail-Content']}>
                         <ShowDetail
                             id={show.id}
                             thumbnail={show.thumbnail}

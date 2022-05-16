@@ -16,6 +16,7 @@
     width: 150px;
     margin-left: 10px;
     font-size: 1rem;
+    color: inherit;
 }
 
 @media screen and (min-width: 37.5rem) {

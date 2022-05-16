@@ -1,12 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Image } from '../Image'
-import './ListOfImages.css'
+import styles from './ListOfImages.module.css'
 
 export function ListOfImages({ images }) {
     if (!(images && images.length)) return ''
     return (
-        <div className="ListOfImages">
+        <div className={styles.ListOfImages}>
             {images.map((src, index) => (
                 <Image
                     key={`image_${index}`}

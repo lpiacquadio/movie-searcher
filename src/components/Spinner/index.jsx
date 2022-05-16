@@ -1,7 +1,7 @@
 import React from 'react'
 import { FaSpinner } from 'react-icons/fa'
-import './Spinner.css'
+import styles from './Spinner.module.css'
 
 export function Spinner() {
-    return <FaSpinner className="Spinner" aria-label="Loading" />
+    return <FaSpinner className={styles.Spinner} aria-label="Loading" />
 }

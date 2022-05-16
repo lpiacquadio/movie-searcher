@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import { IMAGE_SIZE, IMAGE_PLACEHOLDER } from '../../services/settings'
-import './Image.css'
+import styles from './Image.module.css'
 
 export function Image({ src, alt, ariaLabel }) {
     const width = IMAGE_SIZE.width
@@ -19,7 +19,7 @@ export function Image({ src, alt, ariaLabel }) {
 
     return (
         <img
-            className="Image"
+            className={styles.Image}
             key={url}
             src={url}
             alt={alt}

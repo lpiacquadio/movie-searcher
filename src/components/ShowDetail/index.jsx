@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { Image } from '../Image'
 import { Genres } from '../Genres'
 import { Rating } from '../Rating'
-import './ShowDetail.css'
+import styles from './ShowDetail.module.css'
 
 export function ShowDetail({
     thumbnail,
@@ -14,18 +14,18 @@ export function ShowDetail({
     rating
 }) {
     return (
-        <div className="ShowDetail">
+        <div className={styles.ShowDetail}>
             <Image src={thumbnail} alt={title} ariaLabel="Show's portrait" />
-            <div className="ShowDetail-container">
+            <div className={styles['ShowDetail-container']}>
                 <h4>
-                    {title} <span className="ShowDetail-dates">{dates}</span>
+                    {title} <span className={styles['ShowDetail-dates']}>{dates}</span>
                 </h4>
-                <div className="ShowDetail-info">
+                <div className={styles['ShowDetail-info']}>
                     <Rating value={rating} />
                     <Genres values={genres} />
                 </div>
                 <div
-                    className="ShowDetail-description"
+                    className={styles['ShowDetail-description']}
                     dangerouslySetInnerHTML={{ __html: description }}
                 />
             </div>

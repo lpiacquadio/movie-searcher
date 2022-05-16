@@ -1,6 +1,6 @@
 import React from 'react'
-import './Info.css'
+import styles from './Info.module.css'
 
 export function Info({ children }) {
-    return <div className="Info">{children}</div>
+    return <div className={styles.Info}>{children}</div>
 }

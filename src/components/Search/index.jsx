@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 import PropTypes from 'prop-types'
 import { FaSearch } from 'react-icons/fa'
-import './Search.css'
+import styles from './Search.module.css'
 
 export function Search({ onSearch, placeholder, value }) {
     const inputRef = useRef()
@@ -11,7 +11,7 @@ export function Search({ onSearch, placeholder, value }) {
         }
     }
     return (
-        <div className="Search" onClick={selectInput}>
+        <div className={styles.Search} onClick={selectInput}>
             <FaSearch aria-label="Search" />
             <input
                 ref={inputRef}

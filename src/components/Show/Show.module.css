@@ -4,13 +4,9 @@
     width: 210px;
     overflow: hidden;
     margin: auto;
-}
-
-.Show-link {
-    color: #000;
+    color: inherit;
     display: block;
     text-decoration: none;
-    width: 100%;
 }
 
 .Show-description {

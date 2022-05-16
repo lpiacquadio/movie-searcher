@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Show } from '../Show'
-import './ListOfShows.css'
+import styles from './ListOfShows.module.css'
 
 export function ListOfShows({ onNotStarted, onNotFound, search, shows }) {
     if (!search) {
@@ -10,7 +10,7 @@ export function ListOfShows({ onNotStarted, onNotFound, search, shows }) {
         return onNotFound
     }
     return (
-        <div className="ListOfShows">
+        <div className={styles.ListOfShows}>
             {shows.map(({ id, thumbnail, title, description }) => (
                 <Show
                     key={id}

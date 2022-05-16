@@ -1,10 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import './Genres.css'
+import styles from './Genres.module.css'
 
 export function Genres({ values }) {
     return (
-        <ul className="Genres">
+        <ul className={styles.Genres}>
             {values.map((genre, index) => (
                 <li key={`${genre}_${index}`}>{genre}</li>
             ))}

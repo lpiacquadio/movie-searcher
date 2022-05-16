@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import './Rating.css'
+import styles from './Rating.module.css'
 
 export function Rating({ value = 0 }) {
     let color = 'white'
@@ -17,7 +17,7 @@ export function Rating({ value = 0 }) {
     }
     return (
         <span
-            className="Rating"
+            className={styles.Rating}
             style={{ color, backgroundColor }}
             aria-label="Rating"
         >
